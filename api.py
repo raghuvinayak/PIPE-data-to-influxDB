@@ -36,7 +36,7 @@ def stop_service():
 @app.route('/add/<string:NewStream>', methods=['GET'])
 def add_stream(NewStream):
 
-        gstream=start_process(stream)
+     
 	address = NewStream.split('_')
 	addstream = '::'.join(address)
         stop_service()
