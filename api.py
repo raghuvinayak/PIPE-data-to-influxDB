@@ -41,3 +41,15 @@ def add_stream(NewStream):
         time.sleep(1)
         start_process(gstream+' '+addstream)
         return "stream added\n"
+#delete stream
+
+@app.route('/delete/<string:deletestream>', methods=['GET'])
+def delete_stream(deletestream):
+		 address = deletestream.split('_')
+		 delstream = ' '.join(address)
+                 NewStream = gstream.replace(delstream,'')
+                 stop_service()
+                 time.sleep(1)
+                 start_process(NewStream)
+                 return "stream deleted\n"
+
