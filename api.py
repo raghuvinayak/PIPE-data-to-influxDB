@@ -53,3 +53,19 @@ def delete_stream(deletestream):
                  start_process(NewStream)
                  return "stream deleted\n"
 
+@app.route('/showstream', methods=['GET'])
+def show_service():
+#pkill bitrate myName
+         return gstream
+
+
+#change stream
+@app.route('/change/<string:changestream>', methods=['GET'])
+def new_stream(changestream):
+        try:
+             stop_service()
+             time.sleep(3)
+             start_process(changestream)
+        except:
+             print ""
+        return "stream changed\n"
